@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: RBAC
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  datasource:
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/rbac?createDatabaseIfNotExist=true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.json
+    enabled: true
+
+domain:
+  frontend-domain: http://localhost:8080
+
+logging:
+  file:
+    path: './logs/${spring.application.name}'
+    name: ${logging.file.path}/RBAC.log
+  level:
+    com:
+      neoleap: debug
+
+
