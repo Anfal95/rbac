@@ -1,0 +1,27 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "0000000000003",
+        "author": "Anfal Malkawi",
+        "changes": [
+          {
+            "loadData": {
+              "file": "db/data/role.csv",
+              "separator": ";",
+              "tableName": "roles",
+              "usePreparedStatements": "true"
+            }
+          }
+        ],
+        "rollback": [
+          {
+            "sql": {
+              "sql": "TRUNCATE TABLE roles;"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

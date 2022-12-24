@@ -1,0 +1,27 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "0000000000002",
+        "author": "Anfal Malkawi",
+        "changes": [
+          {
+            "loadData": {
+              "file": "db/data/user.csv",
+              "separator": ";",
+              "tableName": "users",
+              "usePreparedStatements": "true"
+            }
+          }
+        ],
+        "rollback": [
+          {
+            "sql": {
+              "sql": "TRUNCATE TABLE users;"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

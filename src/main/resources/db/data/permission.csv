@@ -1,0 +1,6 @@
+id;name;description
+1;create;create user
+2;update;update user
+3;read;read users
+4;delete;delete user
+5;assign;assign role to user

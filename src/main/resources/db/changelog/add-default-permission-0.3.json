@@ -1,0 +1,27 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "0000000000004",
+        "author": "Anfal Malkawi",
+        "changes": [
+          {
+            "loadData": {
+              "file": "db/data/permission.csv",
+              "separator": ";",
+              "tableName": "permissions",
+              "usePreparedStatements": "true"
+            }
+          }
+        ],
+        "rollback": [
+          {
+            "sql": {
+              "sql": "TRUNCATE TABLE permissions;"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
