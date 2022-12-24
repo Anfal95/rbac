@@ -37,4 +37,11 @@ http://localhost:8080/swagger-ui/index.html
 
 * To rollback specific number of change sets `mvn liquibase:rollback -Dliquibase.rollbackCount=1`
 
-
+## Needed Credentials
+* For User Role: 
+    * username: user
+    * password: user
+* For Admin User: 
+    * username: admin
+    * password: admin
+    
